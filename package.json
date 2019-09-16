@@ -1,0 +1,24 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "songs-bands-movies",
+  "main": "keys.js",
+  "scripts": {
+    "test": "hi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kemeier/liri-node-app.git"
+  },
+  "keywords": [
+    "songs",
+    "bands",
+    "movies"
+  ],
+  "author": "Kelly Meier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kemeier/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/kemeier/liri-node-app#readme"
+}
