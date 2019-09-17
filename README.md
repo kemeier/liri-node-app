@@ -31,3 +31,13 @@ movie-this: uses the OMDB API to take a movie name and              outputs the 
 
 do-this: uses the fs Node package, LIRI will take the               text inside of random.txt and then use it to                        call one of LIRI's commands.
 
+Node packages used:
+
+Dotenv: A module that loads variables from a .env file into process.env. 
+
+Request: Makes http calls. 
+
+Moment: JavaScript library for dates/times.
+
+Fs: A built in node package
+
