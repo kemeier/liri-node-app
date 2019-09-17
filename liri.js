@@ -80,7 +80,7 @@ function spotifySong(userSpecific)  {
     spotify.search({
         type: 'track', query: song}, function (error, data) {
         if (error) {
-            return console.log('Error: ' + error);
+            return console.log("Error: " + error);
         } else {
             console.log("Artist: " + data.tracks.items[0].artists[0].name);
             console.log("Song: " + data.tracks.items[0].name);
