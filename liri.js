@@ -20,7 +20,7 @@ function userInput()    {
 
         case 'spotify-this-song':
             spotifySong(userSpecific);
-            break;
+            break;no
             
         case 'movie-this':
             movieThis(userSpecific);
@@ -47,7 +47,7 @@ function concertThis(band)  {
         band = userSpecific;
 }
 
-    axios.get(https://rest.bandsintown.com/artists/"+artist+"/events?app_id=codingbootcamp").then(
+    axios.get(https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp").then(
 
         function(response)  {
             if (response.data[0].venue != undefined) {
@@ -63,6 +63,7 @@ function concertThis(band)  {
         }
     ).catch(function (error) {
         console.log(error);
+        console.log("Error");
     });
 }
         
@@ -88,3 +89,38 @@ function spotifySong(userSpecific)  {
         }
     });
 };
+
+function movieThis(movie)   {
+
+    var movie;
+    if  (userSpecific === undefined)    {
+        movie = "Mr. Nobody";
+        console.log('If you haven not watched "Mr. Nobody," then you should on Netflix!: http://www.imdb.com/title/tt0485947/');
+    } else {
+        movie = userSpecific;
+    };
+
+
+axios.get("http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy").then(
+        function (response) {
+            //console.log(response.data);
+            if (response.data.Title != undefined) {
+                console.log("Title: " + response.data.Title);
+                console.log("Year: " + response.data.Year);
+                console.log("IMDB Rating: " + response.data.imdbRating);
+                console.log("Rotten Tomatoes Rating: " + response.data.tomatoRating);
+                console.log("Country: " + response.data.Country);
+                console.log("Language: " + response.data.Language);
+                console.log("Plot: " + response.data.Plot);
+                console.log("Actors: " + response.data.Actors);
+                
+            }
+        }
+    ).catch(function (error) {
+        console.log(error);
+        console.log("Error");
+    });
+}
+
+
+
