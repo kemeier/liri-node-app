@@ -124,3 +124,4 @@ axios.get("http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy"
 
 
 
+
