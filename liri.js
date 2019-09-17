@@ -36,18 +36,18 @@ function userInput()    {
     }
 };
 
-function concertThis(band)  {
+function concertThis(artist)  {
     if (userRequest === 'concert-this') {
-        var band = "";
+        var artist = "";
         for (var i = 3; i < process.argv.length; i++)   {
-            band += process.argv[i];
+            artist += process.argv[i];
         }
-        console.log(band);
+        console.log(artist);
     }  else {
-        band = userSpecific;
+        artist = userSpecific;
 }
 
-    axios.get(https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp").then(
+axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp").then(
 
         function(response)  {
             if (response.data[0].venue != undefined) {
@@ -122,6 +122,17 @@ axios.get("http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy"
     });
 }
 
+function asSays()   {
+    fs.readFile("random.txt", "utf8", function (error, data)    {
+        if (error)  {return console.log(error);}
 
+        var dataArr = data.split(",");
 
+        userRequest = dataArr[0];
+        userSpecific = dataArr[1];
 
+        userCommand(userRequest, userSpecific);
+    });
+};
+
+userInput();
