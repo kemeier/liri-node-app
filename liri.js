@@ -131,7 +131,7 @@ function asSays()   {
         userRequest = dataArr[0];
         userSpecific = dataArr[1];
 
-        userCommand(userRequest, userSpecific);
+        userInput(userRequest, userSpecific);
     });
 };
 
