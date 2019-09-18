@@ -20,14 +20,14 @@ spotify-this-song: will show the following information about        the song in 
 
 movie-this: uses the OMDB API to take a movie name and              outputs the following information to the                            terminal/bash window:
                 
-                   -Title of the movie.
-                   -Year the movie came out.
-                   -IMDB Rating of the movie.
-                   -Rotten Tomatoes Rating of the movie.
-                   -Country where the movie was produced.
-                   -Language of the movie.
-                   -Plot of the movie.
-                   -Actors in the movie.
+                   -Title of the movie
+                   -Year the movie came out
+                   -IMDB Rating of the movie
+                   -Rotten Tomatoes Rating of the movie
+                   -Country where the movie was produced
+                   -Language of the movie
+                   -Plot of the movie
+                   -Actors in the movie
 
 do-this: uses the fs Node package, LIRI will take the               text inside of random.txt and then use it to                        call one of LIRI's commands.
 
